@@ -21,7 +21,7 @@ deploy.with{
   scm{
     git{
       remote{
-        url(hcmConfRepoUrl)
+        url(hostProjectRepoUrl)
         credentials("adop-jenkins-master")
       }
       branch("*/master")
