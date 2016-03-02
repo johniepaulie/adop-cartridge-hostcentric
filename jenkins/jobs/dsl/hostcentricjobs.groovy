@@ -32,8 +32,19 @@ deploy.with{
       env('PROJECT_NAME',projectFolderName)
   }
   steps {
-	shell ('''#!/bin/bash
-			echo "FTP SCRIPT EXECUTION HERE!"
+	shell ('''#!/bin/sh
+			HOST='192.86.33.23'
+			USER='mdc012'
+			PASSWD='leahcim0'
+		
+			ftp -n $HOST <<END_SCRIPT
+			quote USER $USER
+			quote PASS $PASSWD
+			prompt
+			cd MY.ASM.DEVOPS
+			quit
+			END_SCRIPT
+			exit 0
 			''')
   } 
 }
