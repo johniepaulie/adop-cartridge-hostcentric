@@ -31,6 +31,28 @@ deploy.with{
       env('WORKSPACE_NAME',workspaceFolderName)
       env('PROJECT_NAME',projectFolderName)
   }
+  triggers{
+    gerrit{
+      events{
+        refUpdated()
+      }
+      configure { gerritxml ->
+        gerritxml / 'gerritProjects' {
+          'com.sonyericsson.hudson.plugins.gerrit.trigger.hudsontrigger.data.GerritProject' {
+            compareType("PLAIN")
+            pattern(projectFolderName + "/Mainframe")
+            'branches' {
+              'com.sonyericsson.hudson.plugins.gerrit.trigger.hudsontrigger.data.Branch' {
+                compareType("PLAIN")
+                pattern("master")
+              }
+            }
+          }
+        }
+        gerritxml / serverName("ADOP Gerrit")
+      }
+    }
+  }
   steps {
 	shell ('''#!/bin/sh
 			HOST='192.86.33.23'
