@@ -65,19 +65,19 @@ deploy.with{
             		passive
 			prompt
 			
-		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_Production/workspace/COPYLIB
+		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_UAT/workspace/COPYLIB
 		         cd 'PDCLIB.UAT.BASELINE.COPYLIB'
 		         mput * 
 		            
-		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_Production/workspace/DBRMLIB
+		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_UAT/workspace/DBRMLIB
 		         cd 'PDCLIB.UAT.BASELINE.DBRMLIB'
 		         mput *
 		            
-		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_Production/workspace/DCLGEN
+		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_UAT/workspace/DCLGEN
 		         cd 'PDCLIB.UAT.BASELINE.DCLGEN'
 		         mput *
 		            
-		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_Production/workspace/SRCELIB
+		         lcd /var/jenkins_home/jobs/Hostcentric/jobs/Mainframe/jobs/Deployment_To_UAT/workspace/SRCELIB
 		         cd 'PDCLIB.UAT.BASELINE.SRCELIB'
 		         mput *
 		         
