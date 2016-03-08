@@ -40,7 +40,7 @@ deploy.with{
         gerritxml / 'gerritProjects' {
           'com.sonyericsson.hudson.plugins.gerrit.trigger.hudsontrigger.data.GerritProject' {
             compareType("PLAIN")
-            pattern(projectFolderName + "/Mainframe")
+            pattern(projectFolderName + "/MobileApplication")
             'branches' {
               'com.sonyericsson.hudson.plugins.gerrit.trigger.hudsontrigger.data.Branch' {
                 compareType("PLAIN")
